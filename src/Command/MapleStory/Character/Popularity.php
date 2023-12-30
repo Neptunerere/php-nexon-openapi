@@ -6,19 +6,26 @@ namespace Neptunerere\PhpNexonOpenApi\Command;
 
 use Neptunerere\PhpNexonOpenApi\Enums\MapleStoryCode;
 
-class FindUserByAccessId implements CommandInterface
+class Popularity implements CommandInterface
 {
     /**
      * @var string
      */
-    protected string $characterName;
+    protected string $ocid;
 
     /**
-     * @param string $characterName
+     * @var string
      */
-    public function __construct(string $characterName)
+    protected string $date;
+
+    /**
+     * @param string $ocid
+     * @param string $date
+     */
+    public function __construct(string $ocid, string $date)
     {
-        $this->characterName = $characterName;
+        $this->ocid = $ocid;
+        $this->date = $date;
     }
 
     /**
@@ -34,7 +41,7 @@ class FindUserByAccessId implements CommandInterface
      */
     public function getMethod()
     {
-        return 'id';
+        return MapleStoryCode::CHARACTER . '/popularity';
     }
 
     /**
@@ -59,7 +66,8 @@ class FindUserByAccessId implements CommandInterface
     public function getParams()
     {
         return array(
-            'character_name' => $this->characterName,
+            'ocid' => $this->ocid,
+            'date' => $this->date,
         );
     }
 }
