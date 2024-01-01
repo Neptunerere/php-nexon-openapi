@@ -10,4 +10,5 @@ enum MapleStoryCode: string
 
     case CHARACTER = 'character';
     case USER = 'user';
+    case GUILD = 'guild';
 }

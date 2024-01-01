@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Neptunerere\PhpNexonOpenApi\Command\MapleStory\Union;
+namespace Neptunerere\PhpNexonOpenApi\Command\MapleStory\Guild;
 
 use Neptunerere\PhpNexonOpenApi\Command\CommandInterface;
 use Neptunerere\PhpNexonOpenApi\Enums\{
@@ -11,12 +11,12 @@ use Neptunerere\PhpNexonOpenApi\Enums\{
     HttpMethod,
 };
 
-class Info implements CommandInterface
+class Basic implements CommandInterface
 {
     /**
      * @var string
      */
-    protected string $ocid;
+    protected string $oguildId;
 
     /**
      * @var string
@@ -24,12 +24,12 @@ class Info implements CommandInterface
     protected string $date;
 
     /**
-     * @param string $ocid
+     * @param string $oguildId
      * @param string $date
      */
-    public function __construct(string $ocid, string $date)
+    public function __construct(string $oguildId, string $date)
     {
-        $this->ocid = $ocid;
+        $this->oguildId = $oguildId;
         $this->date = $date;
     }
 
@@ -46,7 +46,7 @@ class Info implements CommandInterface
      */
     public function getMethod()
     {
-        return MapleStoryCode::USER . '/union';
+        return MapleStoryCode::GUILD . '/basic';
     }
 
     /**
@@ -71,7 +71,7 @@ class Info implements CommandInterface
     public function getParams()
     {
         return array(
-            'ocid' => $this->ocid,
+            'oguild_id' => $this->oguildId,
             'date' => $this->date,
         );
     }
