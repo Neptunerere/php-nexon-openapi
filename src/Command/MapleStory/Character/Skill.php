@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Neptunerere\PhpNexonOpenApi\Command;
+namespace Neptunerere\PhpNexonOpenApi\Command\MapleStory\Character;
 
+use Neptunerere\PhpNexonOpenApi\Command\CommandInterface;
 use Neptunerere\PhpNexonOpenApi\Enums\{
     MapleStoryCode,
     ApiVersion,

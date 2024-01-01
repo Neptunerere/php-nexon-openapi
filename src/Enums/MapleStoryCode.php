@@ -9,4 +9,5 @@ enum MapleStoryCode: string
     case MAPLESTORY = 'maplestory';
 
     case CHARACTER = 'character';
+    case USER = 'user';
 }

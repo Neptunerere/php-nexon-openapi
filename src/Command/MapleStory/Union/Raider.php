@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Neptunerere\PhpNexonOpenApi\Command\MapleStory\Character;
+namespace Neptunerere\PhpNexonOpenApi\Command\MapleStory\Union;
 
 use Neptunerere\PhpNexonOpenApi\Command\CommandInterface;
 use Neptunerere\PhpNexonOpenApi\Enums\{
@@ -11,7 +11,7 @@ use Neptunerere\PhpNexonOpenApi\Enums\{
     HttpMethod,
 };
 
-class HexaMatrix implements CommandInterface
+class Raider implements CommandInterface
 {
     /**
      * @var string
@@ -46,7 +46,7 @@ class HexaMatrix implements CommandInterface
      */
     public function getMethod()
     {
-        return MapleStoryCode::CHARACTER . '/hexamatrix';
+        return MapleStoryCode::USER . '/union-raider';
     }
 
     /**
