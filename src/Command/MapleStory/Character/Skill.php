@@ -10,7 +10,7 @@ use Neptunerere\PhpNexonOpenApi\Enums\{
     HttpMethod,
 };
 
-class Popularity implements CommandInterface
+class Skill implements CommandInterface
 {
     /**
      * @var string
@@ -23,13 +23,20 @@ class Popularity implements CommandInterface
     protected string $date;
 
     /**
+     * @var string
+     */
+    protected string $characterSkillGrade;
+
+    /**
      * @param string $ocid
      * @param string $date
+     * @param string $characterSkillGrade
      */
-    public function __construct(string $ocid, string $date)
+    public function __construct(string $ocid, string $date, string $characterSkillGrade)
     {
         $this->ocid = $ocid;
         $this->date = $date;
+        $this->characterSkillGrade = $characterSkillGrade;
     }
 
     /**
@@ -45,7 +52,7 @@ class Popularity implements CommandInterface
      */
     public function getMethod()
     {
-        return MapleStoryCode::CHARACTER . '/popularity';
+        return MapleStoryCode::CHARACTER . '/skill';
     }
 
     /**
@@ -72,6 +79,7 @@ class Popularity implements CommandInterface
         return array(
             'ocid' => $this->ocid,
             'date' => $this->date,
+            'character_skill_grade' => $this->characterSkillGrade,
         );
     }
 }

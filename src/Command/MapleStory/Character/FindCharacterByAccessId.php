@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Neptunerere\PhpNexonOpenApi\Command;
 
-use Neptunerere\PhpNexonOpenApi\Enums\MapleStoryCode;
+use Neptunerere\PhpNexonOpenApi\Enums\{
+    MapleStoryCode,
+    ApiVersion,
+    HttpMethod,
+};
 
 class FindUserByAccessId implements CommandInterface
 {
@@ -42,7 +46,7 @@ class FindUserByAccessId implements CommandInterface
      */
     public function getVersion()
     {
-        return 'v1';
+        return (string) ApiVersion::VERSION_1;
     }
 
     /**
@@ -50,7 +54,7 @@ class FindUserByAccessId implements CommandInterface
      */
     public function getRequestMethod()
     {
-        return 'GET';
+        return (string) HttpMethod::GET;
     }
 
     /**

@@ -10,7 +10,7 @@ use Neptunerere\PhpNexonOpenApi\Enums\{
     HttpMethod,
 };
 
-class Popularity implements CommandInterface
+class Vmatrix implements CommandInterface
 {
     /**
      * @var string
@@ -45,7 +45,7 @@ class Popularity implements CommandInterface
      */
     public function getMethod()
     {
-        return MapleStoryCode::CHARACTER . '/popularity';
+        return MapleStoryCode::CHARACTER . '/vmatrix';
     }
 
     /**

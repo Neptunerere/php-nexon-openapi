@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Neptunerere\PhpNexonOpenApi\Command;
 
-use Neptunerere\PhpNexonOpenApi\Enums\MapleStoryCode;
+use Neptunerere\PhpNexonOpenApi\Enums\{
+    MapleStoryCode,
+    ApiVersion,
+    HttpMethod,
+};
 
 class Stat implements CommandInterface
 {
@@ -49,7 +53,7 @@ class Stat implements CommandInterface
      */
     public function getVersion()
     {
-        return 'v1';
+        return (string) ApiVersion::VERSION_1;
     }
 
     /**
@@ -57,7 +61,7 @@ class Stat implements CommandInterface
      */
     public function getRequestMethod()
     {
-        return 'GET';
+        return (string) HttpMethod::GET;
     }
 
     /**
