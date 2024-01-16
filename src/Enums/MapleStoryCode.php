@@ -11,4 +11,5 @@ enum MapleStoryCode: string
     case USER = 'user';
     case GUILD = 'guild';
     case HISTORY = 'history';
+    case RANKING = 'ranking';
 }
