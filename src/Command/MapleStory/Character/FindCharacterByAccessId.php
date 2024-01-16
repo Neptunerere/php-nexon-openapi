@@ -11,7 +11,7 @@ use Neptunerere\PhpNexonOpenApi\Enums\{
     HttpMethod,
 };
 
-class FindUserByAccessId implements CommandInterface
+class FindCharacterByAccessId implements CommandInterface
 {
     /**
      * @var string
