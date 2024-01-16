@@ -45,7 +45,7 @@ class Cube implements CommandInterface
      */
     public function getGameName()
     {
-        return MapleStoryCode::MAPLESTORY;
+        return MapleStoryCode::MAPLESTORY->value;
     }
 
     /**
@@ -53,7 +53,7 @@ class Cube implements CommandInterface
      */
     public function getMethod()
     {
-        return MapleStoryCode::HISTORY . '/cube';
+        return MapleStoryCode::HISTORY->value . '/cube';
     }
 
     /**
@@ -61,7 +61,7 @@ class Cube implements CommandInterface
      */
     public function getVersion()
     {
-        return (string) ApiVersion::VERSION_1;
+        return ApiVersion::VERSION_1->value;
     }
 
     /**
@@ -69,7 +69,7 @@ class Cube implements CommandInterface
      */
     public function getRequestMethod()
     {
-        return (string) HttpMethod::GET;
+        return HttpMethod::GET->name;
     }
 
     /**

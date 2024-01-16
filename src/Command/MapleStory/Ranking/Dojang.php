@@ -71,7 +71,7 @@ class Dojang implements CommandInterface
      */
     public function getGameName()
     {
-        return MapleStoryCode::MAPLESTORY;
+        return MapleStoryCode::MAPLESTORY->value;
     }
 
     /**
@@ -79,7 +79,7 @@ class Dojang implements CommandInterface
      */
     public function getMethod()
     {
-        return MapleStoryCode::RANKING . '/dojang';
+        return MapleStoryCode::RANKING->value . '/dojang';
     }
 
     /**
@@ -87,7 +87,7 @@ class Dojang implements CommandInterface
      */
     public function getVersion()
     {
-        return (string) ApiVersion::VERSION_1;
+        return ApiVersion::VERSION_1->value;
     }
 
     /**
@@ -95,7 +95,7 @@ class Dojang implements CommandInterface
      */
     public function getRequestMethod()
     {
-        return (string) HttpMethod::GET;
+        return HttpMethod::GET->name;
     }
 
     /**

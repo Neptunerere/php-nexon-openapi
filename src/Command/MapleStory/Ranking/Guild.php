@@ -64,7 +64,7 @@ class Guild implements CommandInterface
      */
     public function getGameName()
     {
-        return MapleStoryCode::MAPLESTORY;
+        return MapleStoryCode::MAPLESTORY->value;
     }
 
     /**
@@ -72,7 +72,7 @@ class Guild implements CommandInterface
      */
     public function getMethod()
     {
-        return MapleStoryCode::RANKING . '/guild';
+        return MapleStoryCode::RANKING->value . '/guild';
     }
 
     /**
@@ -80,7 +80,7 @@ class Guild implements CommandInterface
      */
     public function getVersion()
     {
-        return (string) ApiVersion::VERSION_1;
+        return ApiVersion::VERSION_1->value;
     }
 
     /**
@@ -88,7 +88,7 @@ class Guild implements CommandInterface
      */
     public function getRequestMethod()
     {
-        return (string) HttpMethod::GET;
+        return HttpMethod::GET->name;
     }
 
     /**

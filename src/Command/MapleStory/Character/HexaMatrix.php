@@ -38,7 +38,7 @@ class HexaMatrix implements CommandInterface
      */
     public function getGameName()
     {
-        return MapleStoryCode::MAPLESTORY;
+        return MapleStoryCode::MAPLESTORY->value;
     }
 
     /**
@@ -46,7 +46,7 @@ class HexaMatrix implements CommandInterface
      */
     public function getMethod()
     {
-        return MapleStoryCode::CHARACTER . '/hexamatrix';
+        return MapleStoryCode::CHARACTER->value . '/hexamatrix';
     }
 
     /**
@@ -54,7 +54,7 @@ class HexaMatrix implements CommandInterface
      */
     public function getVersion()
     {
-        return (string) ApiVersion::VERSION_1;
+        return ApiVersion::VERSION_1->value;
     }
 
     /**
@@ -62,7 +62,7 @@ class HexaMatrix implements CommandInterface
      */
     public function getRequestMethod()
     {
-        return (string) HttpMethod::GET;
+        return HttpMethod::GET->name;
     }
 
     /**

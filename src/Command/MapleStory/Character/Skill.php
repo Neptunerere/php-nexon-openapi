@@ -45,7 +45,7 @@ class Skill implements CommandInterface
      */
     public function getGameName()
     {
-        return MapleStoryCode::MAPLESTORY;
+        return MapleStoryCode::MAPLESTORY->value;
     }
 
     /**
@@ -53,7 +53,7 @@ class Skill implements CommandInterface
      */
     public function getMethod()
     {
-        return MapleStoryCode::CHARACTER . '/skill';
+        return MapleStoryCode::CHARACTER->value . '/skill';
     }
 
     /**
@@ -61,7 +61,7 @@ class Skill implements CommandInterface
      */
     public function getVersion()
     {
-        return (string) ApiVersion::VERSION_1;
+        return ApiVersion::VERSION_1->value;
     }
 
     /**
@@ -69,7 +69,7 @@ class Skill implements CommandInterface
      */
     public function getRequestMethod()
     {
-        return (string) HttpMethod::GET;
+        return HttpMethod::GET->name;
     }
 
     /**
